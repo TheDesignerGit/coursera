@@ -1,0 +1,84 @@
+/** base styling **/
+* {
+	box-sizing: border-box;
+	font-family: cursive, helvetica;
+}
+
+h1 {
+	text-align: center;
+	font-size: 175%;
+	margin-bottom: 50px;
+}
+
+.allTextContainer {
+	position: relative;
+	border: 1px solid black;
+	background-color: gray;
+	/*width: 100%;*/
+	margin-right: auto;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	color: black;
+	padding-left: 20px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	border-radius: 10px 0px 10px 10px;
+}
+
+.sectionTitle1, .sectionTitle2, .sectionTitle3 {
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	padding-bottom: 3px;
+	text-align: center;
+	width: 100px;
+	font-size: 125%;
+	font-weight: bold;
+	border-radius: 0px 0px 0px 5px;
+	position: absolute;
+	right: 0;
+}
+
+p {
+	position: relative;
+	top:15px;
+}
+
+.sectionTitle1 {
+	background-color: #D9923B;
+}
+
+.sectionTitle2 {
+	background-color: #40392C;
+	color: white;
+}
+
+.sectionTitle3 {
+	background-color: #D98282;
+}
+/** simple responsive framework. **/
+.row {
+  width: 100%;
+}
+
+/** DESKTOP devices only **/
+@media (min-width: 992px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+  .col-lg-4 {
+    width: 33.33%;
+  }
+}
+
+/** TABLET devices only **/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
