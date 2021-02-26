@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+                <!-- jumbotron class doesn't workin Bootstrap 5 -->
+    <link rel="stylesheet" href="./styles.css">
+                <!-- jQuery (Bootstrap JS plugins depend on it) TODO:-->
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
 
+    <!-- //Bootstrap CSS TODO:
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css"> -->
 <head>
 
     <title>Ristorante Con Fusion: About Us</title>
@@ -16,6 +23,32 @@
 
 
 <body>
+    <nav class='navbar navbar-dark navbar-expand-sm fixed-top'>
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target='#Navbar'>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="./index.html" class="navbar-brand mr-auto">Ristorante con Fusion</a>
+
+            <div class="collapse navbar-collapse" id='Navbar'>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <header class="jumbotron">
         <div class="container">
@@ -30,11 +63,20 @@
         </div>
     </header>
 
+    
     <div class='container'>
         <div class='row row-content'>
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">
+                    <a>About Us</a>
+                </li>
+            </ol>
             <div class='col-12'>
                <h3>About Us</h3>
-               <hr>
+               <!-- <hr> -->
             </div>
         </div>
 
@@ -44,13 +86,13 @@
                 <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
                 <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
             </div>
-            <hr>
+            <!-- <hr> -->
             <div>
             </div>
         </div>
 
 
-        <div class='row row-content'>
+        <div class='row row-content margin-bottom-20px'>
             <div class='col col-sm-12'>
                 <h2>Corporate Leadership</h2>
                 <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
@@ -73,7 +115,7 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
