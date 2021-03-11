@@ -123,6 +123,22 @@ nav {
     margin-top: 30px;
 }
 
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+
+a[role='tab'].active {
+    background-color: #f8f9fa !important
+}
+        /* element with class selector */
+
 /* ::*/
 
 .text-center > a > .fa {

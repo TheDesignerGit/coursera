@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap CSS  -->
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -116,7 +117,7 @@
                     <div class='col col-sm-8'>
                         <div class="card">
                             <h5 class="card-header bg-warning text-white">Reserve a Table</h5>
-                            <div class="card-body card-block">
+                            <div class="card-body card-block(for bootstrap4-alpha only)">
                                 <form>
                                     <div class="form-group row">
                                         <label for="options" class="col-12 col-sm-3 col-form-label">
@@ -153,10 +154,10 @@
                                             <strong>Date and Time</strong>
                                         </label>
                                         <div class="col-12 col-sm-4 mt-3">
-                                            <input type="text" class='form-control' id='date' name='date' placeholder='Date'>
+                                            <input type="date" class='form-control' id='date' name='date' placeholder='Date'>
                                         </div>
                                         <div class="col-12 col-sm-4 mt-3">
-                                            <input type="text" class='form-control' id='time' name='time' placeholder='Time'>
+                                            <input type="time" class='form-control' id='time' name='time' placeholder='Time'>
                                         </div>
 
                                         <div class="col-12 offset-sm-3 mt-3">
