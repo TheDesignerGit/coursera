@@ -1,0 +1,20 @@
+//import every scss to indicates the entire scss structure.
+
+//utilities
+@use './1-utilities/functions';
+@use './1-utilities/variables';
+@use './1-utilities/animations';
+@use './1-utilities/mixin';
+
+//components
+@use './2-components/buttons';
+@use './2-components/meme';
+
+//base
+@use './3-base/reset';
+@use './3-base/typography';
+
+//layout
+@use './4-layout/bg';
+@use './4-layout/app';
+@use './4-layout/footer';

@@ -1,0 +1,139 @@
+@use '../1-utilities' as *;
+@use '../3-base/typography' as *;
+
+.check{
+    position:absolute;
+    left:2rem;
+    display:inline-flex;
+    align-items:center;
+    width:2.5rem;
+    height:2.5rem;
+    border-radius:100%;
+    cursor:pointer;
+    outline:none;
+    border:2px solid color(circle);
+    transition:border-color .3s ease-in-out;
+    &::before{
+        content:url(../images/icon-check.svg);
+        border-radius:100%;
+        display:flex;
+        position:absolute;
+        margin:auto;
+        justify-content:center;
+        align-items:center;
+        color:white;
+        background:$CheckBackground no-repeat; 
+        width:100%;
+        height:100%;
+        bordeR:none;
+        transform:scale(1.2);
+        opacity:0;
+        @include transition(opacity, .3s);
+    }
+    &:hover:before{
+        opacity:1;
+    }
+    &:focus{
+        outline:none;
+    }
+}
+.delete{
+    opacity:0;
+    position:absolute;
+    right:2rem;
+    display:block;
+    align-items:center;
+    justify-content:center;
+    width:2.5rem;
+    min-height:2.5rem;
+    background: url(../images/icon-cross.svg) no-repeat center center;
+    @include transition(all, .1s);
+    cursor:pointer;
+    &:hover{
+        filter:drop-shadow(0 0 15px color(shadow)) invert(95%);
+    }
+    @media screen and (max-width:600px){
+        opacity:1;
+    }
+    &:focus{
+        opacity:1;
+    }
+}
+
+.check-mark{
+    position:absolute;
+    left:2rem;
+    display:block;
+    align-items:center;
+    width:2.5rem;
+    min-height:2.5rem;
+    border-radius:100%;
+    cursor:pointer;
+    border:2px solid color(circle);
+    @include transition(border, .3s);
+    &::before{
+        content:'';
+        background:url(../images/icon-check.svg) no-repeat center center;
+        display:block;
+        position:absolute;
+        top:0;left:0;right:0;bottom:0;
+        width:100%;
+        height:100%;
+        justify-content:center;
+        align-items:center;
+        opacity:0;
+    }
+    &:hover{
+        border:2px double transparent;
+        background-image:linear-gradient(color(input), color(input)), $CheckBackground;
+        background-origin:border-box;
+        background-clip: content-box, border-box;
+    }
+}
+.checked{
+    & button:first-child{
+        opacity:1;
+        background:$CheckBackground;
+        border-color:color(input);
+        
+        &::before{
+            opacity:1;
+        }
+    }
+    & input[type=text]{
+        @include transition(all, .3s); 
+        opacity:.3;
+        text-decoration: line-through;
+    }
+}
+.dragged{
+    filter:drop-shadow(5px 10px 15px rgb(71, 33, 87)) invert(20%);
+}
+
+.volume{
+    position:absolute;
+    display:flex;
+    top:1rem;left:1rem;
+    font-size:3rem;
+    cursor:pointer;
+    color:color;
+    &__mute,
+    &__unmute{
+        position:absolute;
+        color: $white;
+        opacity:.6;
+    }
+    &__mute{
+        display:none;
+    }
+    &:hover &__mute,
+    &:hover &__unmute{
+        color:$BrightBlue;
+    }
+    i{
+        pointer-events:none;
+    }
+}
+.ghost{
+    filter:blur(10px)
+}

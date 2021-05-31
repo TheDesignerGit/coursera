@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script defer src="./main.js"></script>
+  <title>Frontend Mentor | Launch countdown timer</title>
+</head>
+<body class="dark">
+  <main class="timer__container">
+    <div class="timer__wrapper">
+      <div class="timer__number d">
+        <div class="number" data-number-before="10" data-number-after="9">
+          <!-- ::before -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card__face card__face__front">10</div>
+            <div class="card__face card__face__back">9</div>
+          </div>
+          <!-- ::after -->
+        </div>
+        <div class="desc">
+          Second
+        </div>
+      </div>
+      <div class="timer__number h">
+        <div class="number" data-number-before="10" data-number-after="9">
+          <!-- ::before -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card__face card__face__front">10</div>
+            <div class="card__face card__face__back">9</div>
+          </div>
+          <!-- ::after -->
+        </div>
+        <div class="desc">
+          Second
+        </div>
+      </div>
+      <div class="timer__number m">
+        <div class="number" data-number-before="10" data-number-after="9">
+          <!-- ::before -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card__face card__face__front">10</div>
+            <div class="card__face card__face__back">9</div>
+          </div>
+          <!-- ::after -->
+        </div>
+        <div class="desc">
+          Second
+        </div>
+      </div>
+      <div class="timer__number s">
+        <div class="number" >
+          <!-- ::before -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card__face card__face__front">10</div>
+            <div class="card__face card__face__back">9</div>
+          </div>
+          <!-- ::after -->
+        </div>
+        <div class="desc">
+          Second
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

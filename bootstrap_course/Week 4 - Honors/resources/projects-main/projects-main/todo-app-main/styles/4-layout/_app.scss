@@ -1,0 +1,199 @@
+@use '../1-utilities' as *;
+@use '../3-base' as *;
+
+.app{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    margin:8rem auto 0;
+    padding:0 1rem;
+    &__wrapper{
+        max-width:56rem;
+        width:100%;
+    }
+    &__top{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    &__switch{
+        cursor:pointer;
+        img{
+            pointer-events:none;
+            min-width:100%;
+            transition:transform 2s ease;
+        }
+        &:hover img{
+            transform:rotate(220deg);
+        }
+        &:focus-visible img{
+            animation:rotate 3s linear infinite;
+        }
+    }
+}
+.todo{
+    display:block;
+    margin-top:2.5rem;
+    input{
+        max-width:41rem;
+        width:100%;
+        align-items:center;
+        border:none;
+        outline:none;
+        color:color(font);
+        background:transparent;
+        margin:0 6.5rem;
+        white-space: nowrap;
+        caret-color:$BrightBlue;
+    }
+    ::-webkit-input-placeholder{
+        opacity:.7;
+    }
+
+    &__form{
+        width:100%;
+        border-radius:5px;
+    }
+    &__initial{
+        display:flex;
+        align-items:center;
+        border-radius:5px;
+        margin-bottom:2.5rem;
+        background:color(input) ;
+        position:relative;
+        width:100%;
+        white-space:nowrap;
+        min-height:6.5rem;
+        transition: background-color .3s ease-in-out 
+    }
+    &__list{
+        background:color(input) ;
+        border-radius:5px 5px 0 0;
+        box-shadow:0 10px 30px color(shadow);
+        & li:nth-child(2){
+            border-radius:5px 5px 0 0;
+        }
+    }
+    &__item{
+        @extend .todo__initial;
+        position:relative;
+        width:100%;
+        margin:0;
+        min-height:0;
+        height:0;
+        border-radius:0;
+        cursor:pointer;
+        background:color(input);
+        transition: box-shadow .1s ease,  
+                    height .3s ease-in-out, 
+                    background-color .3s ease-in-out, 
+                    opacity .2s ease,
+                    margin .3s ease-in-out;
+        &::after{
+            @include transition(background-color, .3s);
+            position:absolute;
+            content:'';
+            background:color(border);
+            width:100%;
+            height:1px;
+            bottom:0;
+        }
+        & input[type=text]{
+            pointer-events:none;
+        }
+        &:hover .delete{
+            opacity:1;
+        }
+        &:hover{
+            box-shadow:inset 0 0 100px color(shadow)
+        }
+    }
+    &__bottom{
+        @extend .todo__initial;
+        box-shadow:0 17px 25px color(shadow);
+        justify-content:space-between;
+        min-height:5.5rem;
+        margin:0;
+        padding:0 2rem;
+        border-radius:0 0 5px 5px;
+        color:color(info);
+        font-size:1.3rem;
+        transition: all .3s ease-in-out;
+        &-stock{
+            pointer-events:none;
+        }
+        &-actions{
+            max-width:15rem;
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            cursor:pointer;
+            @extend %b-700;
+            &--all{
+                @include transition(color, .2s);
+                transition:outline .3s ease-in-out;
+            }
+            &--all:hover,
+            &--all:focus{
+                color: $BrightBlue;
+            }
+
+            &--active,
+            &--completed{
+                @include transition(color, .2s);
+                @include transition(outline, .2s);
+            }
+            &--active:hover,
+            &--completed:hover,
+            &--active:focus,
+            &--completed:focus,
+            &--active:active,
+            &--completed:active{
+                color:color(hover);
+            }
+        }
+        &-clear{
+            cursor:pointer;
+            @include transition(color, .2s);
+            @include transition(outline, .2s);
+            &:hover{
+                color:color(hover);
+            }
+        }
+    }
+    &__info{
+        display:flex;
+        justify-content:center;
+        margin:4rem 0;
+        p{
+            cursor:help;
+        }
+    }
+    @media screen and (max-width:600px){
+        &__bottom{
+            &-actions{
+                background-color:color(input);
+                margin:0;
+                border-radius:5px;
+                position:absolute;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                min-width:100%;
+                height:4rem;
+                bottom:-6rem;left:0;
+                box-shadow:0 17px 25px color(shadow);
+                & :first-child{
+                    margin-left:20%;
+                }
+                & :last-child{
+                    margin-right:20%;
+                }
+            }
+        }
+        &__info{
+            margin:12rem 0 4rem;
+        }
+    }
+}

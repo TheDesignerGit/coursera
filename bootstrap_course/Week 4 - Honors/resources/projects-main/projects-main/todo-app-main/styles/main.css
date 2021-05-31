@@ -1,0 +1,650 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+.dark {
+  --color-reverse-main: #fafafa;
+  --color-main: #161722;
+  --color-h1: #e4e5f1;
+  --color-border: #393a4c;
+  --color-font: #cacde8;
+  --color-input: #25273c;
+  --color-circle: #393a4c;
+  --color-focus: #777a92;
+  --color-info: #777a92;
+  --color-hover: #e4e5f1;
+  --color-shadow: #0b0c0d;
+}
+
+.light {
+  --color-reverse-main: #161722;
+  --color-main: #fafafa;
+  --color-h1: #e4e5f1;
+  --color-border: #e4e5f1;
+  --color-font: #393a4c;
+  --color-input: white;
+  --color-circle: #cacde8;
+  --color-focus: #393a4c;
+  --color-info: #9394a5;
+  --color-hover: #393a4c;
+  --color-shadow: rgba(83, 83, 83, 0.1);
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dance {
+  0% {
+    transform: translateX(-70%);
+  }
+  50% {
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+@keyframes dance {
+  0% {
+    transform: translateX(-70%);
+  }
+  50% {
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+@-webkit-keyframes dance2 {
+  0% {
+    transform: translateX(-35%);
+  }
+  35% {
+    transform: translateX(35%);
+  }
+  100% {
+    transform: translateX(-35%);
+  }
+}
+@keyframes dance2 {
+  0% {
+    transform: translateX(-35%);
+  }
+  35% {
+    transform: translateX(35%);
+  }
+  100% {
+    transform: translateX(-35%);
+  }
+}
+.todo__bottom-actions {
+  font-weight: 700;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+}
+
+p {
+  font-size: 1.3rem;
+  color: var(--color-info);
+}
+
+.check {
+  position: absolute;
+  left: 2rem;
+  display: inline-flex;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid var(--color-circle);
+  transition: border-color 0.3s ease-in-out;
+}
+.check::before {
+  content: url(../images/icon-check.svg);
+  border-radius: 100%;
+  display: flex;
+  position: absolute;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: linear-gradient(120deg, #57ddff, #c058f3) no-repeat;
+  width: 100%;
+  height: 100%;
+  bordeR: none;
+  transform: scale(1.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.check:hover:before {
+  opacity: 1;
+}
+.check:focus {
+  outline: none;
+}
+
+.delete {
+  opacity: 0;
+  position: absolute;
+  right: 2rem;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  min-height: 2.5rem;
+  background: url(../images/icon-cross.svg) no-repeat center center;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.delete:hover {
+  filter: drop-shadow(0 0 15px var(--color-shadow)) invert(95%);
+}
+@media screen and (max-width: 600px) {
+  .delete {
+    opacity: 1;
+  }
+}
+.delete:focus {
+  opacity: 1;
+}
+
+.check-mark {
+  position: absolute;
+  left: 2rem;
+  display: block;
+  align-items: center;
+  width: 2.5rem;
+  min-height: 2.5rem;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 2px solid var(--color-circle);
+  transition: border 0.3s ease-in-out;
+}
+.check-mark::before {
+  content: "";
+  background: url(../images/icon-check.svg) no-repeat center center;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.check-mark:hover {
+  border: 2px double transparent;
+  background-image: linear-gradient(var(--color-input), var(--color-input)), linear-gradient(120deg, #57ddff, #c058f3);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.checked button:first-child {
+  opacity: 1;
+  background: linear-gradient(120deg, #57ddff, #c058f3);
+  border-color: var(--color-input);
+}
+.checked button:first-child::before {
+  opacity: 1;
+}
+.checked input[type=text] {
+  transition: all 0.3s ease-in-out;
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.dragged {
+  filter: drop-shadow(5px 10px 15px #472157) invert(20%);
+}
+
+.volume {
+  position: absolute;
+  display: flex;
+  top: 1rem;
+  left: 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+  color: color;
+}
+.volume__mute, .volume__unmute {
+  position: absolute;
+  color: white;
+  opacity: 0.6;
+}
+.volume__mute {
+  display: none;
+}
+.volume:hover .volume__mute, .volume:hover .volume__unmute {
+  color: #3a7bfd;
+}
+.volume i {
+  pointer-events: none;
+}
+
+.ghost {
+  filter: blur(10px);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 2px dashed var(--color-reverse-main);
+  outline-offset: 2px;
+  transition: outline 0.3s ease-in-out;
+}
+
+*:active {
+  outline-offset: 4px;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list],
+li {
+  list-style: none;
+}
+
+/*reset button*/
+button {
+  all: unset;
+  /*for IE*/
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* remove input autofill color settings*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px var(--color-input) inset !important;
+  -webkit-text-fill-color: var(--color-font) !important;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background: var(--color-main);
+  transition: background-color 0.5s ease-in-out;
+  position: relative;
+  display: flex;
+}
+
+.bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 30rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease-in-out;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 8rem auto 0;
+  padding: 0 1rem;
+}
+.app__wrapper {
+  max-width: 56rem;
+  width: 100%;
+}
+.app__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app__switch {
+  cursor: pointer;
+}
+.app__switch img {
+  pointer-events: none;
+  min-width: 100%;
+  transition: transform 2s ease;
+}
+.app__switch:hover img {
+  transform: rotate(220deg);
+}
+.app__switch:focus-visible img {
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+}
+
+.todo {
+  display: block;
+  margin-top: 2.5rem;
+}
+.todo input {
+  max-width: 41rem;
+  width: 100%;
+  align-items: center;
+  border: none;
+  outline: none;
+  color: var(--color-font);
+  background: transparent;
+  margin: 0 6.5rem;
+  white-space: nowrap;
+  caret-color: #3a7bfd;
+}
+.todo ::-webkit-input-placeholder {
+  opacity: 0.7;
+}
+.todo__form {
+  width: 100%;
+  border-radius: 5px;
+}
+.todo__initial, .todo__bottom, .todo__item {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 2.5rem;
+  background: var(--color-input);
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  min-height: 6.5rem;
+  transition: background-color 0.3s ease-in-out;
+}
+.todo__list {
+  background: var(--color-input);
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 10px 30px var(--color-shadow);
+}
+.todo__list li:nth-child(2) {
+  border-radius: 5px 5px 0 0;
+}
+.todo__item {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  min-height: 0;
+  height: 0;
+  border-radius: 0;
+  cursor: pointer;
+  background: var(--color-input);
+  transition: box-shadow 0.1s ease, height 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.2s ease, margin 0.3s ease-in-out;
+}
+.todo__item::after {
+  transition: background-color 0.3s ease-in-out;
+  position: absolute;
+  content: "";
+  background: var(--color-border);
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+}
+.todo__item input[type=text] {
+  pointer-events: none;
+}
+.todo__item:hover .delete {
+  opacity: 1;
+}
+.todo__item:hover {
+  box-shadow: inset 0 0 100px var(--color-shadow);
+}
+.todo__bottom {
+  box-shadow: 0 17px 25px var(--color-shadow);
+  justify-content: space-between;
+  min-height: 5.5rem;
+  margin: 0;
+  padding: 0 2rem;
+  border-radius: 0 0 5px 5px;
+  color: var(--color-info);
+  font-size: 1.3rem;
+  transition: all 0.3s ease-in-out;
+}
+.todo__bottom-stock {
+  pointer-events: none;
+}
+.todo__bottom-actions {
+  max-width: 15rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.todo__bottom-actions--all {
+  transition: color 0.2s ease-in-out;
+  transition: outline 0.3s ease-in-out;
+}
+.todo__bottom-actions--all:hover, .todo__bottom-actions--all:focus {
+  color: #3a7bfd;
+}
+.todo__bottom-actions--active, .todo__bottom-actions--completed {
+  transition: color 0.2s ease-in-out;
+  transition: outline 0.2s ease-in-out;
+}
+.todo__bottom-actions--active:hover, .todo__bottom-actions--completed:hover, .todo__bottom-actions--active:focus, .todo__bottom-actions--completed:focus, .todo__bottom-actions--active:active, .todo__bottom-actions--completed:active {
+  color: var(--color-hover);
+}
+.todo__bottom-clear {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  transition: outline 0.2s ease-in-out;
+}
+.todo__bottom-clear:hover {
+  color: var(--color-hover);
+}
+.todo__info {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.todo__info p {
+  cursor: help;
+}
+@media screen and (max-width: 600px) {
+  .todo__bottom-actions {
+    background-color: var(--color-input);
+    margin: 0;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    height: 4rem;
+    bottom: -6rem;
+    left: 0;
+    box-shadow: 0 17px 25px var(--color-shadow);
+  }
+  .todo__bottom-actions :first-child {
+    margin-left: 20%;
+  }
+  .todo__bottom-actions :last-child {
+    margin-right: 20%;
+  }
+  .todo__info {
+    margin: 12rem 0 4rem;
+  }
+}
+
+footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.attribution {
+  color: var(--color-info);
+}
+.attribution a {
+  color: #3a7bfd;
+}
+
+.meme {
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  background: var(--color-input);
+  transition: all 0.3s ease-in-out;
+}
+.meme__removal {
+  position: relative;
+  cursor: help;
+  display: flex;
+  justify-content: center;
+  max-height: 13.5rem;
+  margin: 1rem auto 1.5rem;
+  transition: height 0.5s ease-in-out, margin 0.5s ease-in-out;
+  -webkit-animation: dance 25s linear infinite;
+          animation: dance 25s linear infinite;
+}
+.meme__removal img {
+  max-height: 13.5rem;
+  border-radius: 5px;
+  pointer-events: none;
+}
+@media screen and (max-width: 590px) {
+  .meme__removal {
+    -webkit-animation: dance2 25s linear infinite;
+            animation: dance2 25s linear infinite;
+  }
+}
+.meme__removal::before {
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: -2.1rem;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 8px solid var(--color-reverse-main);
+}
+.meme__removal::after {
+  pointer-events: none;
+  position: absolute;
+  content: "List is empty.";
+  font-size: 1.5rem;
+  width: 100%;
+  top: -5.1rem;
+  height: 3rem;
+  background: var(--color-reverse-main);
+  color: var(--color-main);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.meme__removal:hover:after {
+  content: "Create List !!!";
+}
+.meme__hide::before, .meme__hide::after {
+  display: none;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */

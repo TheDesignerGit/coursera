@@ -1,0 +1,23 @@
+@use '../1-utilities' as *;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+html{
+    font-size:62.5%;
+};
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:1.8rem;
+    @media screen and (max-width:600px){
+        font-size:1.6rem;
+    }
+}
+h1{
+    font-size:4rem;
+    color:$white;
+    text-transform:uppercase;
+    letter-spacing:2rem;
+};
+p{
+    font-size:1.3rem;
+    color:color(info);
+
+}
