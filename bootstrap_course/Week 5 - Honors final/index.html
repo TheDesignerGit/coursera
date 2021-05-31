@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <script defer src="./app.js"></script>
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+</head>
+
+<body>
+  <header id="top">
+    <div class="top-container size1440">
+      <section class="top-wrapper ">
+        <div class="top-logo">
+            <i class="fas fa-book-open"></i>
+            <a href="#bot" >LnR</a>
+          </div>
+        <div class="real-burger"><i class="fas fa-align-center"></i></div>
+        <div class="top-nav-wrapper">
+          <div class="top-nav">
+            <a class="focus" href="#bot" >Subjects</a>
+            <a class="focus" href="#bot" >Pricing</a>
+          </div>
+          <div class="top-login">
+            <a class="focus" href="#bot">Login</a>
+            <a class="signup" href="#bot"> Sign Up</a>
+          </div>
+        </div>
+      </section>
+      <section class="hero-wrapper">
+        <div class="hero-left">
+          <h2>Science Education For Curious Young Minds</h2>
+          <p>Tackle science topics on the frontier, informed by the most current research, years before it appears in mainstream textbooks.</p>
+          <div class="hero-button">
+            <a class="btn" href="#bot">Get Learning</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-image"><img src="./images/hero.svg" alt="working"></div>
+        </div>
+      </section>
+    </div>
+  </header>
+  <main>
+    <div class="main-container size1440">
+      <section id="features" class="urlshorten-wrapper">
+        <div class="before-shorten">
+          <form class="form-shorten" >
+            <input class="link-input" type="text" name="link" aria-label="link"  value="" placeholder="Enter Email">
+            <button type="submit" class="url-btn">Send Email</button>
+          </form>
+          <div class="warning-zone"></div>
+        </div>
+        <ul class="shorten-list">
+
+          <!-- <li class="shorten-link" >
+            <div class="links">
+              <div class="before">https://longgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg/</div>
+              <div class="after">https://longgggggggggggggggggggggggggggggggggggggggggggggggggggg</div>
+            </div>
+            <div class="buttons">
+              <button class="li-copy">Copy</button>
+              <button class="li-remove"><i class="far fa-trash-alt"></i></button>
+            </div>
+          </li> -->
+
+        </ul>
+      </section>
+      <section id="pricing"class="content-wrapper">
+        <div class="stick"></div>
+        <div class="content-title">
+          <h3>Advance Your Horizons</h3>
+          <p>Here are some of the features that LnR has to offer.</p>
+        </div>
+        <div class="content-boxes">
+          <div class="col">
+            <h4>Einstein's Brain
+            </h4>
+            <p>Making the discoveries of Einstein, might very well require an intellect of Einstein's caliber, but understanding Einstein's work only requires curiosity and motivation to learn.
+            </p>
+          </div>
+          <div class="col">
+            <h4>Gain Clarity</h4>
+            <p>"Make it your goal to Learn what humanity already knows about the world". - Richard Feynman
+            </p>
+          </div>
+          <div class="col">
+            <h4>Learner Friendly</h4>
+            <p>To Help students Go beyond the fluffy renderings of complex subject matter or worse, the deliberate attempts to erect a shroud of mystique over cutting-edge science, usually done for entertainment purposes more so than for any scholarship aim. 
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer id="bot">
+    <div class="footer-container size1440" >
+      <section id="resources" class="footer-wrapper-event">
+        <h3>Reach Your Fullest Potential</h3>
+        <div class="footer-button">
+          <a class="btn" id='lesson-btn' href="./lesson.html">Preview Lesson</a>
+        </div>
+      </section>
+
+      <section class="footer-wrapper-links">
+        <div class="top-logo">
+          <i class="fas fa-book-open"></i>
+          <a href="#bot" >LnR</a>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><span>Features</span></li>
+            <li class="space"><a href="javascript:void(0)">Subjects</a></li>
+            <li><a href="javascript:void(0)">Pricing</a></li>
+          </ul>
+          <ul>
+            <li><span>Resources</span></li>
+            <li class="space"><a href="javascript:void(0)">Blog</a></li>
+            <li><a href="javascript:void(0)">Support</a></li>
+          </ul>
+          <ul>
+            <li><span>Company</span></li>
+            <li class="space"><a href="javascript:void(0)">About</a></li>
+            <li><a href="javascript:void(0)">Contact  </a></li>
+          </ul>
+        </div>
+        <div class="footer-icons">
+          <a href="#" title="icons1"><i class="fab fa-facebook-square"> </i></a>
+          <a href="#" title="icons2"><i class="fab fa-twitter"> </i></a>
+          <a href="#" title="icons3"><i class="fab fa-pinterest"> </i></a>
+          <a href="#" title="icons4"><i class="fab fa-instagram"> </i></a>
+        </div>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>
