@@ -1,0 +1,23 @@
+/* use this to put borders around things... */
+h1 {
+  /* text-align: center; */
+  margin-bottom: 0px;
+}
+
+.crop-img{
+  max-height:150px;
+  max-width:100%;
+  margin-bottom: 10px;
+}
+
+.large-img{
+  max-width:50%;
+  max-height:400px;
+  display:block;
+  margin:auto;
+}
+
+h2 {
+  font-size: 0.9vw;
+  text-align: center;
+}

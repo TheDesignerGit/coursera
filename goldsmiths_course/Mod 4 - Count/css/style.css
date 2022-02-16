@@ -1,0 +1,111 @@
+:root {
+    --mainColour: rgb(0, 245, 123);
+}
+
+h1 {
+    text-align: center;
+    /* margin-bottom: 20px; */
+    /* margin-top: 200px; */
+    font-weight: bold;
+    /* line-height: 0; */
+}
+
+h1:hover {
+    color: var(--mainColour);
+    transition: 200ms ease-in-out;
+}
+
+.cards {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(148, 0, 0, 0.207);
+    padding: 0 20px;
+    margin: 15px;
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    padding: 40px;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+    border: 0;
+}
+        /* descendant selector */
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{
+    border: 0;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+        /* 5*s - selectors */
+        /* border: 0; = neutralise */
+
+.showcase-form input:focus {
+    outline: none;
+            /* border: 0; = neutralise */
+}
+
+.buttons {
+    border: 0;
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background:rgb(238, 142, 125);
+    color: white;
+    border-radius: 10px;
+}
+
+#upBtn {
+    background-color: rgb(36, 181, 36);
+}
+
+#downBtn {
+    background-color: rgb(232, 41, 41);
+}
+
+#number {
+    margin: 0 0;
+    /* height: 50px;
+    justify-content: center;
+    align-items: center; */
+}
+
+.button {
+    border: 0;
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background:rgb(238, 142, 125);
+    color: white;
+    border-radius: 10px;
+}
+
+.button:hover {
+    transition: 200ms;
+    transform: scale(.95)
+}
+        /* 3*s- transform */
+
+...........
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+  
+body {
+    /* background-image: linear-gradient(0deg,
+    rgba(247, 247, 247, 1) 23.8%,
+    rgba(252, 221, 221, 1) 92%)
+    height: 0; */
+    background-color: rgb(255, 232, 228);
+    font-family: 'Lato', sans-serif;
+}

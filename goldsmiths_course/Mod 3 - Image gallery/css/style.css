@@ -1,0 +1,36 @@
+:root {
+    --mainColour: rgb(245, 159, 0);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1:hover {
+    color: rgb(245, 159, 0);;
+    transition: 200ms;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.allSmallImages {
+    max-height: 150px;
+    max-width: 100%;
+    border-radius: 5px 5px;;
+}
+
+.allSmallImages:hover {
+    border: 5px solid var(--mainColour);
+    transition: 100ms;
+    transition-delay: 50ms;
+            /* ??ease in equivalent */
+}
+
+.bigImage {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 5px 5px;
+}

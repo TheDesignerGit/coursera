@@ -1,0 +1,83 @@
+/* custom properties */
+:root {
+    --primary-color:  rgb(34, 34, 34);
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+    color: var(--primary-color);
+}
+
+
+* {
+    background:khaki;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+button {
+    color: var(--primary-color);
+    font-weight: bold;
+    background-color: cadetblue;
+    border-radius: 10px;
+    text-decoration: none;
+    border-style: none;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Assignment by Wandile Ndaba, for Coursera 'Responsive Website Basics' Course (8 Feb 21) */

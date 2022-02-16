@@ -1,0 +1,52 @@
+/**** BASE STYLING *****/
+
+body {
+    background: gray;
+}
+
+a, ul, p {
+    color: whitesmoke;
+}
+    /* 5*s - using comma for combination selector */
+
+h1, h2, h3 {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+* {
+    font-family: Helvetica, sans-serif;
+}
+    /* star selector */
+
+nav a, footer {
+    color :rgb(34, 34, 34);
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+    /* 3*s - specificity to overide other css rules */
+    /* font sizing: 1 rem = 100pc */
+    /* removing link underline w/ "text-deco = none" */
+
+footer {
+    text-align: center;
+}
+
+li {
+    font-style: italic;
+}
+
+.indent {
+    margin-left: 30px;
+}
+
+/* .col-md-12 {
+    text-align: center;
+} */
+
+
+a:hover {
+    color: goldenrod;
+
+}
+    /* psuedo selector */

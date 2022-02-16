@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+        <!-- 1 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+            href="css/bootstrap.css" /> 
+    <link rel="stylesheet" href="css/style.css"/>
+            <!-- "link" + tab -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <title>JavaScript</title>
+
+</head>
+<body>
+        <!-- <h1 id="title" onclick="alert('hello');">Hello</h1> -->
+                <!-- week 3 - mouse click -->
+
+        <!-- <h1 
+                id="title" 
+                onclick="console.log('hello');">Hello
+        </h1> -->
+                <!-- week 3 - console. -->
+
+        <!-- <h1 id="title" 
+                onclick="$('#title').html('Goodbye')">Hello
+        </h1> -->
+                <!-- week 3 - manip. HTML elements -->
+
+        <!-- <h1 id="title" onclick="sayHello();">
+                Hello
+        </h1> -->
+                <!-- week 3 - script tag -->
+
+        <!-- <script>
+                function sayHello () {
+                       alert("Hello");
+                }
+        </script> -->
+                <!-- week 3 - script tag -->
+
+        <h1 id="title" onclick="sayGoodbye();">
+                Hello
+        </h1>
+
+        <!-- <script>
+                function sayGoodbye () {
+                       $('#title').html('Goodbye');
+                       $('#title').click(function () {
+                               $('#title').html('Hello');
+                               $('#title').off('click');
+                       })
+                };
+        </script> -->
+        <script>
+        let sayGoodbye = () => {
+                $("#title").html("Goodbye"); 
+                $("#title").click( () => {
+                        $("#title").html("Hello"); 
+                        $("#title").off("click")
+                });
+        }
+        </script>
+                                <!-- arrow functions. click & off method (17 Feb 21) -->
+                <!-- week 3 - anonymous functions -->
+
+
+
+</body>
+</html>

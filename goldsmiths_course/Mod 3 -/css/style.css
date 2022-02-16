@@ -1,0 +1,7 @@
+h1:hover {
+    color: orange;
+}
+
+#title {
+    transition: 200ms;
+} 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping and Billing</title>	
+    <style>		
+        :root {
+            --bgColour: rgb(241, 247, 255);
+            --blueColour: rgb(121, 183, 255);
+            --dropShadow: 0 5px 5px rgba(54, 93, 111, 0.248);
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+        * {
+            font-family: 'Lato', sans-serif;
+            color: rgb(17, 17, 17);
+        }
+        body {
+            background: var(--bgColour);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        input{			
+            border:1px solid rgb(208, 211, 213);
+        }		
+        input:focus{
+            background-color: var(--bgColour);		
+        }
+        fieldset{
+            margin-bottom: 4%;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: var(--dropShadow);
+            border: 2px solid var(--blueColour); !important;
+        }	
+        input[type="submit"] {
+            border: 0;
+            border-radius: 15px;
+            background: var(--blueColour);
+            width: 80px;
+            box-shadow: var(--dropShadow);
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            transition: all 200ms;
+            transform: scale(.95);
+            background: var(--bgColour);
+        }
+        p[id="subtitle"] {
+            width: 550px;
+            margin-left: 50px;
+            margin-bottom: 40px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            margin: 15px 5px;
+        }
+        h1 {
+            margin-bottom: 0;
+        }
+        p[id="myName"] {
+            margin-top: 0;
+            margin-bottom: 50px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+	<h1>JavaScript Homework</h1>	
+    <p id="myName">submission by&nbsp;<strong>Wandile Ndaba</strong>&nbsp; (7 Apr 21)</p>
+	<form>		
+        <fieldset>
+            <legend>Shipping Information</legend>			  
+            
+            <label for ="shippingName">Name:</label>		  
+            <input type = "text" name = "Name" id = "shippingName" required><br/>
+            
+            <label for = "shippingzip">Zip code:</label>		  
+            <input type = "text" name = "zip" id = "shippingZip" pattern = "[0-9]{5}" required><br/>
+        </fieldset>
+        
+        <input type="checkbox" id="same" name="same" onchange= "billingFunction()"/>		
+        <label for = "same">Is the Billing Information the Same?</label>						
+        <fieldset>
+            <legend>Billing Information</legend>			  
+            <label for ="billingName">Name:</label>		  
+            <input type = "text" name = "Name" id = "billingName" required><br/>
+
+            <label for = "billingzip">Zip code:</label>		  
+            <input type = "text" name = "zip" id = "billingZip" pattern = "[0-9]{5}" required><br/>
+	</fieldset>
+
+    <input type = "submit" value = "Verify"/>	
+    </form>
+
+
+    <script>
+        function billingFunction() {
+            // local variables
+            const shipName = document.querySelector("#shippingName");
+            const shipZip = document.querySelector("#shippingZip");
+            const billingName = document.querySelector("#billingName");
+            const billingZip = document.querySelector("#billingZip");
+            const checkBox = document.querySelector("#same");
+
+            if (checkBox.checked === true) {
+                console.log("it's checked");
+                billingName.value = shipName.value;
+                billingZip.value = shipZip.value;
+            } else {
+                console.log("it's NOT checked");
+                billingName.value = '';
+                billingZip.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
+

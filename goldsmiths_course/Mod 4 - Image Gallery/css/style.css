@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+ body {
+    background-image: linear-gradient(
+    0deg,
+    rgba(247, 247, 247, 1) 23.8%,
+    rgba(252, 221, 221, 1) 92%
+    align-items: center;
+    justify-content: center;
+  );
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/************   ref: https://vanillawebprojects.com/projects/music-player/                                   *******************/
+
+:root {
+    --mainColour: rgb(245, 159, 0);
+}
+        /* 3*s - custom property */
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1:hover {
+    color: rgb(245, 159, 0);;
+    transition: 200ms;
+}
+
+span {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* span:hover {
+    color: rgb(245, 159, 0);;
+    transition: 300ms;
+} */
+
+
+.container {
+    max-width: 800px;
+    /* margin-left: 10%; */
+    height: 800px;
+}
+            /* fixed: shifting when tall images */
+
+
+#bigImageFrame {
+    display: flex;
+    margin-left: auto;
+    margin-right:auto;;    
+}
+            /* fixed: center images */
+
+/* #bigImageFrame:hover {
+    background-color: tomato;
+    opacity: 50%
+} */
+
+
+button:focus {
+    outline: none;
+                /* 3*s - make buttons neutral */
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    outline-style: none;
+            /* 3*s - make buttons neutral */
+    
+    border-radius: 25px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+
+    color:rgb(255, 255, 255);
+    background-color: var(--mainColour);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.151);
+;
+}
+
+#forward {
+    position: absolute;
+    left: 0px;
+}
+
+#backward {
+    position: absolute;
+    right: 0;
+} 
+
+#buttons {
+    position: relative;
+}
+        /*  fixed: for position: absolute to work, must be position:relative of parent */
+
+
+/* .row {
+    background-color: red;
+} */
+
+
+.allSmallImages {
+    max-height: 150px;
+    max-width: 100%;
+    border-radius: 5px 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.151);
+    margin-bottom: 15px;
+}
+
+.allSmallImages:hover {
+    border: 5px solid var(--mainColour);
+    transition: 100ms;
+    transition-delay: 50ms;
+             /* ??ease in equivalent */
+}
+
+.bigImage {
+    max-width: 100%;
+    max-height: 500px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-radius: 5px 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.151);
+};
+
+

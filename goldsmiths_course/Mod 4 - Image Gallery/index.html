@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+        <!-- 1 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+            href="css/bootstrap.css" /> 
+    <link rel="stylesheet" href="css/style.css"/>
+            <!-- "link" + tab -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <title>Image Gallery - Slideshow</title>
+    <link rel="shortcut icon" type="" href="img/favicon.png">
+
+</head>
+<body>
+<div class="container" >
+        <h1>Image Gallery<span> - Slideshow</span></h1>
+
+        <div class="row" id="thumbnailRow">
+                <div class="col-md-2 col-sm-2">
+                        <img id="image1" class="allSmallImages" src="img/image 1.jpg" alt="image 1">   
+                </div>
+
+                <div class="col-md-2 col-sm-2">
+                        <img id="image2" class="allSmallImages" src="img/image 2.jpg" alt="image 2">                        
+                </div>
+                
+                <div class="col-md-2 col-sm-2">
+                        <img id="image3" class="allSmallImages" src="img/image 3.jpg" alt="image 3">        
+                </div>
+
+                <div class="col-md-2 col-sm-2">
+                        <img id="image4" class="allSmallImages" src="img/image 4.jpg" alt="image 4">        
+                </div>
+                
+                <div class="col-md-2 col-sm-2">
+                        <img id="image5" class="allSmallImages" src="img/image 5.png" alt="image 5">                        
+                </div>
+
+                <div class="col-md-2 col-sm-2">
+                        <img id="image6" class="allSmallImages" src="img/image 6.jpg" alt="image 6">  
+                </div>
+        </div>
+
+        <div class="row">
+                <div id="buttons" class="col-md-2 col-sm-2">
+                        <button id="backward">&lt</button>
+                </div>
+
+                <div class="col-md-8 col-sm-8">
+                        <img id="bigImageFrame" class="bigImage" src="img/image 1.jpg" alt="image 1">
+                </div>
+
+                <div id="buttons" class="col-md-2 col-sm-2">
+                        <button id="forward">&gt</button>
+                </div>
+        </div>
+</div>
+
+<script>
+        // 1. Change Big Image functionality
+        $('.allSmallImages').click(function () {
+                $('#bigImageFrame').attr('src', $(this).attr('src'))
+
+
+                let id = $(this).attr("id");
+                counter = parseInt(id.slice(-1));
+        });
+                        // <!-- 10*s - 'click' and 'attr' function -->
+
+        // 2. Button functionality
+        let counter = 1;
+
+        $('#forward').click(function () {
+                counter = counter + 1;
+
+                if (counter > 6) {
+                        counter = 1;
+                }
+                $('#image'+counter).click();
+        })
+
+        $('#backward').click(function () {
+                counter = counter - 1;
+
+                if (counter < 1) {
+                        counter = 6;
+                }
+                $('#image'+counter).click();
+        })
+
+        // 4. Slideshow functionality
+        let paused = false;
+
+        setInterval( () => {
+                if(!paused) {
+                        $('#forward').click();
+                };
+        } ,1500)
+        
+        $('#bigImageFrame').click(function () {
+                paused = !paused;
+        })
+                        // 10*s - using 'not' operator. arrow function. setInterval
+</script>
+
+</body>
+</html>

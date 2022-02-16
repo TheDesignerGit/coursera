@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Form Validation Exercise</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #text-element {
+            font-size: 2rem;
+        }
+        button {
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            border-style: none;
+            background-color: bisque;
+            margin: 5px 5px;
+        }
+        input[type='submit'] {
+            background: lightseagreen;
+            border-radius: 5px;
+            border: 0;
+            padding: 5px 10px;
+            margin: 10px auto;
+        }
+            /* (5*s) tag with attribute selector */
+    </style>
+</head>
+
+<body>
+    <!-- <form>
+        <label for="email_addr">Preferred Email Address</label>
+        <input type="email" id='email_addr' name='email1' value='me@me.com' required>
+        <br>
+        <label for="email_repeat">Repeat Email Address</label>
+        <input type="email" id='email_repeat' required onchange='myFunction()'>
+        <br>
+        <input type="submit" value= "Confirm Email My G">
+    </form>
+    <script>
+        function myFunction () {
+            if (document.getElementById(email_addr).value
+                != 
+                document.getElementById(email_addr).value) {
+                alert("Emails Must Be The Same");
+            };
+        }
+</script> -->
+
+    <form>
+        <label>Preferred email address:
+                <input type="email" id="email_addr" name="email1" value = "me@me.com" required></label>
+            <br>
+            <label>Repeat email address:
+                <input type="email" id="email_repeat" name="email2" required onchange="check()"></label>
+            <br>      
+        <input type = 'submit' value = "Confirm Emails!" onclick = "return check()">
+    </form>
+    <script>
+        function check() {
+            var email1 = document.getElementById('email_addr');
+            var email2 = document.getElementById('email_repeat');
+                    if ( email1.value != email2.value) {
+                        alert("The two emails must match!!");
+                        return false;
+                }
+        }
+    </script>
+
+</body>
+</html>
