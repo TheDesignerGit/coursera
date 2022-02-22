@@ -263,6 +263,16 @@ input {
     font-weight: var(--fontWeight-semi-bold);
 }
 
+.nav__logo span:nth-child(1){
+    font-weight: 100;
+    /* font-family: ; */
+    font-style: italic;
+}
+
+.nav__logo span:nth-child(2){
+    font-weight: 900;
+}
+
 .nav__toggle {
     font-size: 1.2rem;
     cursor: pointer;
