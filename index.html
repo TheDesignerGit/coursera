@@ -4,503 +4,209 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--  ===  FAVICON, REMIX ICONS, SWIPER === .:. -->
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-            <!-- add to Anki -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <!-- ====CSS ====  .:. -->
+    <title>Fitness Website</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <title>Week 3 - Responsive Travel Website</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> -->
+                <!-- Add to Anki , CDN -->
+    <script src="https://kit.fontawesome.com/01f099256f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-<!-- ===== HEADER =====  :.. -->
-    <header class="header" id="header">
-        <div id="header-bg" style="opacity: 0;"></div>
-
-        <nav class="nav container">
-            <a href="#" class="nav__logo"><span>Qhawe</span><span>Travel</span></a>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="ri-function-line"></i>
+        <!-- Navbar Section-->
+        <nav class="navbar">
+            <a href="#" class="navbar__logo">JYM <span>fitness</span></a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link active-link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#discover" class="nav__link">Discover</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#experience" class="nav__link">Experience</a>
-                    </li>
-                </ul>
-
-                <div class="nav__dark">
-                    <!-- theme change button -->
-                    <span class="change-theme-name">Dark Mode</span>
-                    <i class="ri-moon-line change-theme" id="theme-button"></i>
-                </div>
-
-                <i class="ri-close-line nav__close" id="nav-close"></i>
+            <div class="navbar__menu">
+                <a href="#services" class="navbar__link">Services</a>
+                <a href="#plans" class="navbar__link">Plans</a>
+                <a href="#team" class="navbar__link">Trainers</a>
+                <a href="#" class="navbar__link">Join Today</a>
             </div>
-
-
         </nav>
-    </header>    
 
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="texture-circle"></div>
+            <div class="hero__content">
+                <h1 class="animate-hero">JyM <span>fitness</span></h1>
+                <p class="animate-hero">Join Now for Only <strong>R290</strong></p>
+                <a href="#" class='button animate-hero'>Get Started</a>
+            </div>
+        </div>
 
-<!-- ======= MAIN :.. ========= -->
-    <main class="main">
-        <!-- ============= Home .:.   =============== -->
-        <section class="home" id="home">
-            <img src="./img/home1.jpg" alt="home" class="home__img">
-            <div class="home__container container grid">
-                <div class="home__data">
-                    <span class="home__data-subtitle">Discover Your Place</span> 
-                    <h1 class="home__data-title">
-                        Explore The <br> Most <b> Beautiful <br>  Beaches </b>
-                    </h1>
-                    <a href="#" class="button">Explore</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="#" target="_blank" class="home__social-link">
-                        <i class="ri-facebook-box-fill"></i>  
-                    </a>
-
-                    <a href="#" target="_blank" class="home__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-
-                    <a href="#" target="_blank" class="home__social-link">
-                        <i class="ri-twitter-fill"></i>
-                    </a>
-                </div>
-
-                <div class="home__info">
-                    <div>
-                        <span class="home__info-title">5 Best Places to Visit</span>
-                        <a href="#" class="button button-flex button--link home__info-button">
-                            More <i class="ri-arrow-right-line"></i>
-                        </a>
+        <!-- SERVICES SECTION  -->
+        <div class="services" id='services'>
+            <div class="services__container">
+                <div>
+                    <p class="topline animate-services">Features</p>
+                    <h1 class="services__heading animate-services">What We Offer</h1>
+                    <div class="services__features">
+                        <p class="services__feature animate-services"> 
+                            <i class="fas fa-check-circle"></i> Group Fitness Classes
+                            <!-- ##Add to Anki , using img tags-->
+                        </p>
+                        <p class="services__feature animate-services"> 
+                            <i class="fas fa-check-circle"></i> Personal Trainer Sessions
+                        </p>
+                        <p class="services__feature animate-services"> 
+                            <i class="fas fa-check-circle"></i> Indoor Pool
+                        </p>
+                        <p class="services__feature animate-services"> 
+                            <i class="fas fa-check-circle"></i> Steam Room and Sauna
+                        </p>
+                        <p class="services__feature animate-services"> 
+                            <i class="fas fa-check-circle"></i> Basketball Court
+                        </p>
+                        <p class="services__feature animate-services"> 
+                            <i class="fas fa-check-circle"></i> Open 24/7
+                        </p>
                     </div>
-
-                    <div class="home__info-overlay">
-                        <img src="./img/home2.jpg" alt="home2" class="home__info-img">
-                    </div>
+                </div>
+                <div class="services__img__wrapper card-icon animate-img">
+                    <i class="fas fa-play-circle"></i>
+                    <div class="play-icon-back"></div>
+                    <img src="./img/gym-3.jpg" alt="Gym" class="services__img">
                 </div>
             </div>
-        </section>
+            <i class="fas fa-basketball-ball texture-icon"></i>
+        </div>
 
-        <!-- ============= About  .:.   =============== -->
-        <section class="about section" id="about">
-            <div class="about__container container grid">
-                <div class="about__data">
-                    <h2 class="section__title about__title">
-                        More Information <br> About The Best Beaches
-                    </h2>
-                    <p class="about__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ea similique assumenda ipsum et omnis perspiciatis mollitia, repellendus quia dolorum asperiores eos dolore ad excepturi nihil necessitatibus, ullam est accusamus.
-                    </p>
-                    <a href="#" class="button buttonShadow">Reserve A Place</a>
-                            <!-- add to Anki, styled <a> tag as a button-->
-                </div>
-
-                <div class="about__img">
-                    <div class="about__img-overlay">
-                        <img src="./img/about1.jpg" alt="about" class="about__img-one">
+        <!-- MEMBERSHIP SECTION -->
+        <div class="membership" id='plans'>
+            <h1 class="animate-membership">View Our Plans</h1>
+            <p class="membership__descr animate-membership">Get started today and receive 25% off your first month</p>
+            <div class="membership__wrapper">
+                <div class="membership__card animate-card">
+                    <div class="membership__title">
+                        <i class="fas fa-dumbbell card-icon"></i>
+                        <h3>Starter</h3>
                     </div>
-                    <div class="about__img-overlay">
-                        <img src="./img/about2.jpg" alt="about" class="about__img-two">
+                    <div class="membership__perks">
+                        <p>Get access to the entire gym</p>
+                        <p><strong>R290</strong> per/month</p>
                     </div>
-
+                    <a href="#" class="button">Sign Up</a>
                 </div>
-            </div>
-        </section>        
 
-        <!-- ============= Discover Section .:.   =============== -->
-        <section class="discover section" id="discover">
-            <h2 class="section__title">
-                Discover The Most <br> Attractive Places
-                        <!-- add to Anki, using  <br> for line breaks -->
-            </h2>
-            <div class="discover__container container swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!-- ============= Discover 1 .:.   =============== -->
-                        <div class="discover__card swiper-slide">
-                            <img src="./img/discover1.jpg" alt="discover" class="discover__img">
-                            <div class="discover__data">
-                                <h2 class="discover__title">Djenne</h2>
-                                <span class="discover__description">
-                                    24 tours available
-                                </span>
-                            </div>
-                        </div>
-                    <!-- ============= Discover 2 .:.   =============== -->
-                        <div class="discover__card swiper-slide">
-                            <img src="./img/discover2.jpg" alt="discover" class="discover__img">
-                            <div class="discover__data">
-                                <h2 class="discover__title">Maputo</h2>
-                                <span class="discover__description">
-                                    15 tours available
-                                </span>
-                            </div>
-                        </div>
-                    <!-- ============= Discover 3 .:.   =============== -->
-                        <div class="discover__card swiper-slide">
-                            <img src="./img/discover3.jpg" alt="discover" class="discover__img">
-                            <div class="discover__data">
-                                <h2 class="discover__title">Bali</h2>
-                                <span class="discover__description">
-                                    18 tours available
-                                </span>
-                            </div>
-                        </div>
-                    <!-- ============= Discover 4 .:.   =============== -->
-                        <div class="discover__card swiper-slide">
-                            <img src="./img/discover4.jpg" alt="discover" class="discover__img">
-                            <div class="discover__data">
-                                <h2 class="discover__title">Hawaii</h2>
-                                <span class="discover__description">
-                                    32 tours available
-                                </span>
-                            </div>
-                        </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ============= Experience .:.   =============== -->
-        <section class="experience section" id="experience">
-            <h2 class="section__title">
-                With Our Experience <br> We Will Serve You
-            </h2>
-            <div class="experience__container container grid">
-                <div class="experience__content grid">
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">23+</h2>
-                        <span class="experience__description">Year <br> Experience </span>
+                <div class="membership__card  animate-card">
+                    <div class="membership__title">
+                        <i class="fas fa-bicycle card-icon"></i>
+                        <h3>Silver</h3>
                     </div>
-
-                    <div class="experience__data">
-                        <h2 class="experience__number">75</h2>
-                        <span class="experience__description">Complete <br> Tours </span>
+                    <div class="membership__perks">
+                        <p>Get access to the entire gym</p>
+                        <p>Group Fitness Classes</p>
+                        <p><strong>R490</strong> per/month</p>
                     </div>
+                    <a href="#" class="button">Sign Up</a>
+                </div>
 
-                    <div class="experience__data">
-                        <h2 class="experience__number">121+</h2>
-                        <span class="experience__description">Tourist <br> Destinations </span>
+                <div class="membership__card  animate-card">
+                    <div class="membership__title">
+                        <i class="fas fa-dumbbell card-icon"></i>
+                        <h3>Gold</h3>
                     </div>
-
-                </div>
-
-                <div class="experience__img grid">
-
-                    <div class="experience__overlay">
-                        <img src="./img/experience1.jpg" alt="experience" class="experience__img-one">
+                    <div class="membership__perks">
+                        <p>Get access to the entire gym</p>
+                        <p>Group Fitness Classes</p>
+                        <p>Private Personal Training</p>
+                        <p><strong>R990</strong> per/month</p>
                     </div>
-
-                    <div class="experience__overlay">
-                        <img src="./img/experience2.jpg" alt="experience" class="experience__img-two">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============= Video .:.   =============== -->
-        <section class="video section" id="video">
-            <h2 class="section__title">Video Tour</h2>
-            <div class="video__container container">
-                <p class="video__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid eaque quibusdam nihil doloremque quasi minima d</p>
-
-                <div class="video__content">
-                    <video id="video-file">
-                        <source src="./video/video.mp4" type="video/mp4">
-                    </video>
-
-                    <button class="button button--flex video__button" id="video-button">
-                        <i class="ri-play-line video__button-icon" id="video-icon"></i>
-                    </button>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ============= Places .:.   =============== -->
-        <section class="place section" id="place">
-            <h2 class="section__title">Choose Your Place</h2>
-            <div class="place__container container grid">
-                
-                <!-- ============= Place Card 1.:.   =============== -->
-                <div class="place__card">
-                    <img src="./img/place1.jpg" alt="place" class="place__img">
-
-                    <div class="place__content"> 
-                        <span class="place__rating">
-                            <i class="ri-star-line place__rating-icon"></i>
-                            <span class="place__rating-number">4.5</span>
-                        </span>
-
-                        <div class="place__data">
-                            <h3 class="place__title">Djenne</h3>
-                            <span class="place__subtitle">Mali</span>
-                            <span class="place__price">$2997</span>
-                        </div>
-                    </div>
-
-                    <button class="button button--flex place__button">
-                        <i class="ri-arrow-right-line"></i>
-                    </button>
-                </div>
-                
-                <!-- ============= Place Card 2.:.   =============== -->
-                <div class="place__card">
-                    <img src="./img/place2.jpg" alt="place" class="place__img">
-
-                    <div class="place__content">
-                        <span class="place__rating">
-                            <i class="ri-star-line place__rating-icon"></i>
-                            <span class="place__rating-number">4.2</span>
-                        </span>
-
-                        <div class="place__data">
-                            <h3 class="place__title">Maputo</h3>
-                            <span class="place__subtitle">Mozambique</span>
-                            <span class="place__price">$1997</span>
-                        </div>
-                    </div>
-
-                    <button class="button button--flex place__button">
-                        <i class="ri-arrow-right-line"></i>
-                    </button>
-                </div>
-                
-                <!-- ============= Place Card 3.:.   =============== -->
-                <div class="place__card">
-                    <img src="./img/place3.jpg" alt="place" class="place__img">
-
-                    <div class="place__content">
-                        <span class="place__rating">
-                            <i class="ri-star-line place__rating-icon"></i>
-                            <span class="place__rating-number">3.8</span>
-                        </span>
-
-                        <div class="place__data">
-                            <h3 class="place__title">Bali</h3>
-                            <span class="place__subtitle">Indonesia</span>
-                            <span class="place__price">$3997</span>
-                        </div>
-                    </div>
-
-                    <button class="button button--flex place__button">
-                        <i class="ri-arrow-right-line"></i>
-                    </button>
-                </div>
-                
-                <!-- ============= Place Card 4.:.   =============== -->
-                <div class="place__card">
-                    <img src="./img/place4.jpg" alt="place" class="place__img">
-
-                    <div class="place__content">
-                        <span class="place__rating">
-                            <i class="ri-star-line place__rating-icon"></i>
-                            <span class="place__rating-number">4.5</span>
-                        </span>
-
-                        <div class="place__data">
-                            <h3 class="place__title">Hawaii</h3>
-                            <span class="place__subtitle">USA</span>
-                            <span class="place__price">$2310</span>
-                        </div>
-                    </div>
-
-                    <button class="button button--flex place__button">
-                        <i class="ri-arrow-right-line"></i>
-                    </button>
-                </div>
-                
-                <!-- ============= Place Card 5.:.   =============== -->
-                <div class="place__card">
-                    <img src="./img/place5.jpg" alt="place" class="place__img">
-
-                    <div class="place__content">
-                        <span class="place__rating">
-                            <i class="ri-star-line place__rating-icon"></i>
-                            <span class="place__rating-number">4.5</span>
-                        </span>
-
-                        <div class="place__data">
-                            <h3 class="place__title">Juba</h3>
-                            <span class="place__subtitle">South Sudan</span>
-                            <span class="place__price">$6920</span>
-                        </div>
-                    </div>
-
-                    <button class="button button--flex place__button">
-                        <i class="ri-arrow-right-line"></i>
-                    </button>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ============= Subscribe .:.   =============== -->
-        <section class="subscribe section">
-            <div class="subscribe__bg">
-                <div class="subscribe__container container">
-                    <h2 class="section__title subscribe__title">
-                        Subscribe Our <br> Newletter
-                    </h2>
-                    <p class="subscribe__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, veniam.</p>
-
-                    <form action="" class="subscribe__form">
-                        <input type="text" placeholder="Enter an email" class="subscribe__input">
-                        <button class="button">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============= Sponsors .:.   =============== -->
-        <section class="sponsor section">
-            <div class="sponsor__container container grid">
-                
-                <div class="sponsor__content">
-                    <img src="./img/sponsors1.png" alt="sponsor" class="sponsor__img">
-                </div>
-
-                <div class="sponsor__content">
-                    <img src="./img/sponsors2.png" alt="sponsor" class="sponsor__img">
-                </div>
-
-                <div class="sponsor__content">
-                    <img src="./img/sponsors3.png" alt="sponsor" class="sponsor__img">
-                </div>
-
-                <div class="sponsor__content">
-                    <img src="./img/sponsors4.png" alt="sponsor" class="sponsor__img">
-                </div>
-
-                <div class="sponsor__content">
-                    <img src="./img/sponsors5.png" alt="sponsor" class="sponsor__img">
-                </div>
-            </div>
-        </section>
-        
-    </main>
-
-<!-- ============= Footer :..   =============== -->
-    <footer class="footer section">
-        <div class="footer__container container grid">
-            <div class="footer__content grid">
-                <div class="footer__data">
-                    <h3 class="footer__title">Travel</h3>
-                    <p class="footer__description">Your choose the <br> destination, we offer you the <br> experience </p>
-
-                    <div>
-                        <a href="#" class="footer__social">
-                            <i class="ri-facebook-box-fill"></i>  
-                        </a>
-
-                        <a href="#" class="footer__social">
-                            <i class="ri-instagram-fill"></i>
-                        </a>
-
-                        <a href="#" class="footer__social">
-                            <i class="ri-twitter-fill"></i>
-                        </a>
-
-                        <a href="#" class="footer__social">
-                            <i class="ri-youtube-fill"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer__data">
-                    <h3 class="footer__subtitle">About</h3>
-                    
-                    <ul>
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">About Us</a>
-                        </li>
-
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">Features</a>
-                        </li>
-
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">News & Blog</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer__data">
-                    <h3 class="footer__subtitle">Company</h3>
-
-                    <ul>
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">Plans & Pricing</a>
-                        </li>
-
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">Team</a>
-                        </li>
-
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">Become a member</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer__data">
-                    <h3 class="footer__subtitle">Support</h3>
-
-                    <ul>
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">FAQs</a>
-                        </li>
-
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">Support Center</a>
-                        </li>
-
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="footer__rights">
-                <p class="footer__copy">&#169; 2023 XTW Enterprises. All Rights Reserved</p>
-                <div class="footer__terms">
-                    <a href="#" class="footer__terms-link">Terms & Conditions</a>
-                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    <a href="#" class="button">Sign Up</a>
                 </div>
             </div>
         </div>
-    </footer>
+        <!-- TEAM SECTION -->
+        <div class="team">
+            <div class="team__wrapper" id='team'>
+                <div class="team__text animate-team">
+                    <p class="topline">Private Coaching</p>
+                    <h1>Meet Our Trainers</h1>
+                    <p class="team__descr">
+                        All our personal trainers have over 30 years of experience combined.
+                        Each trainer specialises in strength and mobility workouts.
+                    </p>
+                </div>
+                <div class="team__text animate-team">
+                    <p class="topline">Free Trial</p>
+                    <h1>7-Day Trial</h1>
+                    <p class="team__descr">
+                        You can work with each trainer for 7 days for free, in order to see if they are a good fit for your goals.
+                    </p>
+                </div>
+                <div class="team__card animate-team">
+                    <p>Coretta</p>
+                    <img src="./img/trainer-8.jpg" alt="trainer" class="team__img">
+                </div>
+                <div class="team__card  animate-team">
+                    <p>Nelson</p>
+                    <img src="./img/trainer-9.jpg" alt="trainer" class="team__img">
+                </div>
+                <div class="team__card  animate-team">
+                    <p>Mary</p>
+                    <img src="./img/trainer-3.jpg" alt="trainer" class="team__img">
+                </div>
+                <div class="team__card  animate-team">
+                    <p>Martin</p>
+                    <img src="./img/trainer-7.jpg" alt="trainer" class="team__img">
+                </div>
+            </div>
+        </div>
 
-    <!-- ============= scroll up .:.   =============== -->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="ri-arrow-up-line scrollup-icon"></i>
-    </a>
+        <!-- EMAIL SECTION -->
+        <div class="email">
+            <div class="email__content" >
+                <h1 class="animate-email">Get Access To Members-Only Perks</h1>
+                <p class="animate-email">Sign up for our newsletter below to get $100 off your first personal training session.</p>
+                <form action="#" class='form__wrap animate-email'>
+                    <label for="email">
+                        <input type="email" placeholder="Enter your email" id="email">
+                    </label>
+                    <button class="button" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
 
-    <!-- ============= Javascript .:.   =============== -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-</body> 
+        <!-- FOOTER SECTION  -->
+        <div class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__descr">
+                    <h1>JyM Fitness</h1>
+                    <p>Luxury fitness gym located in downtown Miami.</p>
+                    <p id="phone">555-123-4567</p>
+                </div>
+                <div class="footer__links">
+                    <h2 class="footer__title">Contact Us</h2>
+                    <a href="#" class="footer__link">Contact</a>
+                    <a href="#" class="footer__link">Support</a>
+                    <a href="#" class="footer__link">Sponsorships</a>
+                </div>
+            </div>
+            <div class="footer__wrapper">
+                <div class="footer__links">
+                    <h2 class="footer__title">Memberships</h2>
+                    <a href="#" class="footer__link">Pricing</a>
+                    <a href="#" class="footer__link">Plans</a>
+                    <a href="#" class="footer__link">FAQ</a>
+                </div>
+                <div class="footer__links">
+                    <h2 class="footer__title">Social Media</h2>
+                    <a href="#" class="footer__link">Instagram</a>
+                    <a href="#" class="footer__link">Facebook</a>
+                    <a href="#" class="footer__link">Youtube</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
+        <script src='app.js'></script>
+</body>
 </html>
