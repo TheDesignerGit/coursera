@@ -1,60 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Barba.js with Barba CSS Plugin</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="assets/app.css" rel="stylesheet">
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>BarbaJS Transition</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;600&display=swap" rel="stylesheet">
-</head>
+  <body data-barba="wrapper">
+      <!-- 'wrapper' usually on body tag -->
 
-<body data-barba="wrapper" class="homePage">
-        <!-- add to Anki -->
-    <div class="load-container">
-        <div class="loading-screen"></div>
-    </div>
+    <header data-barba="container" data-barba-namespace="home" class="is-home" data-background="#5C85EE">
+          <!-- 'container' on main/div tag. is what is swapped on page changes -->
+      <div class="transition">
+        <h2>Cover Screen</h2>
+      </div>
+      <div class="content">
+        <!-- <h1>We are learning<br />page transitions<br />with Barba.js</h1>
+        <p>This demo is using @barba/css plugin.</p> -->
+        <h1> The quick brown<br />fox jumps<br />over the lazy dog</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <a href="fade.html">Fade Transition</a>
+      </div>
+    </header>
 
-    <main data-barba="container" data-barba-namespace="home-section" class="homePage">
-            <!-- add to Anki -->
-        <div class="header">
-            <h1 class="title animate-this">
-                H<span>o</span>me Page
-            </h1>
-            <div class="animate-this button">
-                <a href="./about.html">Go to About</a>
-            </div>
-            <div class="animate-this button">
-                <a href="#">Image Gallery (section)</a>
-            </div>
-            <div class="animate-this button">
-                <a href="#">Art Studio (site)</a>
-            </div>
-            <div class="animate-this button">
-                <a href="#">XXL Hero (section)</a>
-            </div>
-        </div>
-    </main>
-
-
-
-<!-- JQUERY .:. -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- BARBA JS .:. -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.umd.js.map"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-<!-- <script src="https://unpkg.com/@barba/core"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/0.0.2/barba.min.js"></script> -->
-<!-- GSAP .:. -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<!-- My Custom JS .:. -->
-<script src="./assets/js/app.js" type="module"></script>
-
-</body>
-
+    <script src="assets/app.js"></script>
+  </body>
 </html>
